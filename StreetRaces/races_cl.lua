@@ -67,7 +67,7 @@ RegisterCommand("race", function(source, args)
             for i= 1, config_vehiculos,1 then
                local autito = GetHashKey(#config_vehiculos)
             end
-        if amount and args[4] == autito then
+        if amount and args[4] == autito and args[4] ~= nil then
             -- Get optional start delay argument and starting coordinates
             local startDelay = tonumber(args[3])
             --local carselect = tonumber (args[4])
