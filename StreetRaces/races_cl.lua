@@ -180,7 +180,9 @@ Citizen.CreateThread(function()
         if IsPedInAnyVehicle(player, false) then
             -- Get player position and vehicle
             local position = GetEntityCoords(player)
-            local vehicle = GetVehiclePedIsIn(player, false)
+            local vehicle = GetVehiclePedIsIn(player, false) -- CHECKEA EL VEHICULO EN EL QUE ESTAS
+                --TODO:
+                -- + ESTABLECER UNA LISTA DE VEHICULOS PARA LAS CARRERAS DONDE CON EL COMANDO /RACE START AMOUNT [AUTO SELECCIONADO] 
 
             -- Player is racing
             if raceStatus.state == RACE_STATE_RACING then
