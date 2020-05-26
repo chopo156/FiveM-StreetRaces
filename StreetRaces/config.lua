@@ -11,6 +11,11 @@ config_cl = {
     hudEnabled = true,                  -- Enable racing HUD with time and checkpoints
     hudPosition = vec(0.015, 0.725)     -- Screen position to draw racing HUD
 }
+config_vehiculos = {
+    "adder",
+    "cheetah",
+    "washington",
+}
 
 -- SERVER CONFIGURATION
 config_sv = {
