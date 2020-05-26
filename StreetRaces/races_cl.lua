@@ -57,12 +57,20 @@ RegisterCommand("race", function(source, args)
         if name ~= nil then
             TriggerServerEvent('StreetRaces:loadRace_sv', name)
         end
-    elseif args[1] == "start" then
+    elseif args[1] == "start" and not args[4] then
+            if args[4] == nil then
+                notifyPlayer("Seleccione un auto")
+                continue
+            end
         -- Parse arguments and create race
         local amount = tonumber(args[2])
-        if amount then
+            for i= 1, config_vehiculos,1 then
+               local autito = GetHashKey(#config_vehiculos)
+            end
+        if amount and args[4] == autito then
             -- Get optional start delay argument and starting coordinates
             local startDelay = tonumber(args[3])
+            --local carselect = tonumber (args[4])
             startDelay = startDelay and startDelay*1000 or config_cl.joinDuration
             local startCoords = GetEntityCoords(GetPlayerPed(-1))
 
