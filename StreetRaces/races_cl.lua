@@ -60,7 +60,7 @@ RegisterCommand("race", function(source, args)
     elseif args[1] == "start" and not args[4] then
             if args[4] == nil then
                 notifyPlayer("Seleccione un auto")
-                continue
+                break
             end
         -- Parse arguments and create race
         local amount = tonumber(args[2])
